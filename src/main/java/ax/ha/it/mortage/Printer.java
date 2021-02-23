@@ -19,7 +19,7 @@ public class Printer {
             int years = p.getYears();
             Calculator calc = new Calculator(totalLoan, interest,years);
             double monthly = calc.calculateFormula();
-            toPrint.append("*******************************************************\n");
+            toPrint.append("**************************************************************************************************************\n");
             toPrint.append("Prospect ");
             toPrint.append(i);
             toPrint.append(": ");
@@ -31,8 +31,9 @@ public class Printer {
             toPrint.append(" years and pay ");
             toPrint.append(monthly);
             toPrint.append(" each month.\n");
+            i++;
         }
-        toPrint.append("*******************************************************\n");
+        toPrint.append("**************************************************************************************************************\n");
 
         return toPrint.toString();
     }
