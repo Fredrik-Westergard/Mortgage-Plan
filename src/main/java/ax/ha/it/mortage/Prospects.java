@@ -28,4 +28,12 @@ public class Prospects {
     public int getYears() {
         return years;
     }
+
+    @Override
+    public String toString() {
+        return  "customer='" + customer + '\'' +
+                ", totalLoan=" + totalLoan +
+                ", interest=" + interest +
+                ", years=" + years;
+    }
 }

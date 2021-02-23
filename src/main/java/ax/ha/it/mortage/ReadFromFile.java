@@ -1,9 +1,6 @@
 package ax.ha.it.mortage;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +24,9 @@ public class ReadFromFile {
                     StringBuilder customers = new StringBuilder();
                     for (int i = 0; i < split.length - 3; i++) {
                         customers.append(split[i]);
+                        customers.append(",");
                     }
+                    customers.deleteCharAt(customers.length()-1);
                     Prospects p = new Prospects(customers.toString(), totalLoan, interest, years);
                     list.add(p);
                 }
