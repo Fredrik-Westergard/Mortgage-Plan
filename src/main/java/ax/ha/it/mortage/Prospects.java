@@ -2,11 +2,11 @@ package ax.ha.it.mortage;
 
 public class Prospects {
     private String customer;
-    private int totalLoan;
-    private int interest;
+    private double totalLoan;
+    private double interest;
     private int years;
 
-    public Prospects(String customer, int totalLoan, int interest, int years){
+    public Prospects(String customer, double totalLoan, double interest, int years){
         this.customer = customer;
         this.totalLoan = totalLoan;
         this.interest = interest;
@@ -17,11 +17,11 @@ public class Prospects {
         return customer;
     }
 
-    public int getTotalLoan() {
+    public double getTotalLoan() {
         return totalLoan;
     }
 
-    public int getInterest() {
+    public double getInterest() {
         return interest;
     }
 
