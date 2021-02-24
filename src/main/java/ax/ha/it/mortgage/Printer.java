@@ -1,4 +1,4 @@
-package ax.ha.it.mortage;
+package ax.ha.it.mortgage;
 
 import java.util.List;
 
@@ -14,11 +14,11 @@ public class Printer {
         StringBuilder toPrint = new StringBuilder();
         int i = 1;
         for(Prospects p: prospects) {
-            double totalLoan = p.getTotalLoan();
-            double interest = p.getInterest();
+            Money totalLoan = p.getTotalLoan();
+            Money interest = p.getInterest();
             int years = p.getYears();
             Calculator calc = new Calculator(totalLoan, interest,years);
-            double monthly = calc.calculateFormula();
+            Money monthly = calc.calculateFormula();
             toPrint.append("**************************************************************************************************************\n");
             toPrint.append("Prospect ");
             toPrint.append(i);
@@ -29,7 +29,7 @@ public class Printer {
             toPrint.append("€ for a period of ");
             toPrint.append(years);
             toPrint.append(" years and pay ");
-            toPrint.append(monthly);
+            toPrint.append(monthly.getMoney());
             toPrint.append(" each month.\n");
             i++;
         }

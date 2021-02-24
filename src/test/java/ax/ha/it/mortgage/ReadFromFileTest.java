@@ -1,4 +1,4 @@
-package ax.ha.it.mortage;
+package ax.ha.it.mortgage;
 
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;

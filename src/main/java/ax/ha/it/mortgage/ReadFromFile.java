@@ -1,4 +1,4 @@
-package ax.ha.it.mortage;
+package ax.ha.it.mortgage;
 
 import java.io.*;
 import java.util.ArrayList;

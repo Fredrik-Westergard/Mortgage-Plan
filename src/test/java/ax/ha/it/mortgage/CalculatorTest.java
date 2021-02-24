@@ -1,4 +1,4 @@
-package ax.ha.it.mortage;
+package ax.ha.it.mortgage;
 
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
@@ -11,17 +11,17 @@ public class CalculatorTest extends TestCase {
     private List<Prospects> list = readfromfile.readFile();
 
     @Test
-    public void calculateFormulaTest(){
-        double totalLoan = list.get(0).getTotalLoan();
-        double interest = list.get(0).getInterest();
+    public void testCalculateFormula(){
+        Money totalLoan = list.get(0).getTotalLoan();
+        Money interest = list.get(0).getInterest();
         int years = list.get(0).getYears();
         Calculator calc = new Calculator(totalLoan, interest,years);
         assertEquals(calc.calculateFormula(), 46.63584183673469);
     }
 
     @Test
-    public void toThePowerOfTest(){
-        Calculator calc = new Calculator(0,0,0);
+    public void testToThePowerOf(){
+        Calculator calc = new Calculator(new Money(0),new Money(0),0);
         assertEquals(calc.toThePowerOf(5.5,5), 5032.84375);
     }
 

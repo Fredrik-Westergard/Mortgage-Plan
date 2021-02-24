@@ -1,13 +1,13 @@
-package ax.ha.it.mortage;
+package ax.ha.it.mortgage;
 
 public class Calculator {
     private double totalLoan;
     private double interest;
     private int years;
 
-    public Calculator(double totalLoan, double interest, int years) {
-        this.totalLoan = totalLoan;
-        this.interest = interest;
+    public Calculator(Money totalLoan, Money interest, int years) {
+        this.totalLoan = totalLoan.getMoney();
+        this.interest = interest.getMoney();
         this.years = years;
     }
 
@@ -35,10 +35,10 @@ public class Calculator {
         return temp;
     }
 
-    public double calculateFormula(){
+    public Money calculateFormula(){
         int p = 12*years;
         double b = interest/(100+12);
-        return (totalLoan*(b*toThePowerOf((1+b),p)))/toThePowerOf((1+b),p-1);
+        return new Money((totalLoan*(b*toThePowerOf((1+b),p)))/toThePowerOf((1+b),p-1));
     }
 
 
