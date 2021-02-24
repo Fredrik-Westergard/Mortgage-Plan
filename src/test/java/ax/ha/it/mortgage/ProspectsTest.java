@@ -3,7 +3,14 @@ package ax.ha.it.mortgage;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
+/**
+ * prospects test using JUnit
+ * @author Fredrik Westergård
+ */
 public class ProspectsTest extends TestCase {
+    /**
+     * test if prospects' getters work
+     */
     @Test
     public void testProspects(){
         Prospects p = new Prospects("Westergård",1000.59,5.65,2);

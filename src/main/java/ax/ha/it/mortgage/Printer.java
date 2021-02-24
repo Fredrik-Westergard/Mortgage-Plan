@@ -2,13 +2,25 @@ package ax.ha.it.mortgage;
 
 import java.util.List;
 
+/**
+ * printer class
+ * @author Fredrik Westergård
+ */
 public class Printer {
-    private List<Prospects> prospects;
+    private List<Prospects> prospects; //list of Prospects to print
 
+    /**
+     * Printer constructor
+     * @param prospects the prospects list
+     */
     public Printer(List<Prospects> prospects) {
         this.prospects = prospects;
     }
 
+    /**
+     * toString override to print the prospects list
+     * @return a string of prospects information
+     */
     @Override
     public String toString() {
         StringBuilder toPrint = new StringBuilder();

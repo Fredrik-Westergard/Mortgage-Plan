@@ -5,20 +5,30 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+/**
+ * test for Calculator
+ * @author Fredrik Westergård
+ */
 public class CalculatorTest extends TestCase {
 
-    private ReadFromFile readfromfile = new ReadFromFile();
-    private List<Prospects> list = readfromfile.readFile();
+    private ReadFromFile readfromfile = new ReadFromFile(); //read from file object
+    private List<Prospects> list = readfromfile.readFile(); //list of prospects
 
+    /**
+     * test to check if calculator outputs the right number
+     */
     @Test
     public void testCalculateFormula(){
         Money totalLoan = list.get(0).getTotalLoan();
         Money interest = list.get(0).getInterest();
         int years = list.get(0).getYears();
         Calculator calc = new Calculator(totalLoan, interest,years);
-        assertEquals(calc.calculateFormula(), 46.63584183673469);
+        assertEquals(calc.calculateFormula().getMoney(), 46.64);
     }
 
+    /**
+     * test to check if toThePowerOf outputs correct numbers
+     */
     @Test
     public void testToThePowerOf(){
         Calculator calc = new Calculator(new Money(0),new Money(0),0);
