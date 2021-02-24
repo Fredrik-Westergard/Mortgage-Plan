@@ -27,7 +27,7 @@ public class Printer {
         int i = 1;
         for(Prospects p: prospects) {
             Money totalLoan = p.getTotalLoan();
-            Money interest = p.getInterest();
+            double interest = p.getInterest();
             int years = p.getYears();
             Calculator calc = new Calculator(totalLoan, interest,years);
             double monthly = calc.calculateFormula();

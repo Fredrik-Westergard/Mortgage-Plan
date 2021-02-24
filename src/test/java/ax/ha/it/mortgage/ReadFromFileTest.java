@@ -21,7 +21,7 @@ public class ReadFromFileTest extends TestCase {
     public void testReadFromFileFirstItem(){
         System.out.println(list.get(0).toString());
         assertEquals(list.get(0).getCustomer(), "Juha");
-        assertEquals(list.get(0).getTotalLoan(), 1000.0);
+        assertEquals(list.get(0).getTotalLoan().getMoney(), 1000.0);
         assertEquals(list.get(0).getInterest(), 5.0);
         assertEquals(list.get(0).getYears(), 2);
     }
@@ -33,7 +33,7 @@ public class ReadFromFileTest extends TestCase {
     public void testReadFromFileSecondItem(){
         System.out.println(list.get(1).toString());
         assertEquals(list.get(1).getCustomer(), "Karvinen");
-        assertEquals(list.get(1).getTotalLoan(), 4356.0);
+        assertEquals(list.get(1).getTotalLoan().getMoney(), (double)4356.0);
         assertEquals(list.get(1).getInterest(), 1.27);
         assertEquals(list.get(1).getYears(), 6);
     }
@@ -45,8 +45,8 @@ public class ReadFromFileTest extends TestCase {
     public void testReadFromFileThirdItem(){
         System.out.println(list.get(2).toString());
         assertEquals(list.get(2).getCustomer(), "Claes Månsson");
-        assertEquals(list.get(2).getTotalLoan(), 1300.55);
-        assertEquals(list.get(2).getInterest(), 8.67);
+        assertEquals(list.get(2).getTotalLoan().getMoney(), (double)1300.55);
+        assertEquals(list.get(2).getInterest(), (double)8.67);
         assertEquals(list.get(2).getYears(), 2);
     }
 
@@ -58,8 +58,8 @@ public class ReadFromFileTest extends TestCase {
     public void testReadFromFileFourthItem(){
         System.out.println(list.get(3).toString());
         assertEquals(list.get(3).getCustomer(), "\"Clarencé,Andersson\"");
-        assertEquals(list.get(3).getTotalLoan(), 2000.0);
-        assertEquals(list.get(3).getInterest(), 6.0);
+        assertEquals(list.get(3).getTotalLoan().getMoney(), (double)2000.0);
+        assertEquals(list.get(3).getInterest(), (double)6.0);
         assertEquals(list.get(3).getYears(), 4);
     }
 

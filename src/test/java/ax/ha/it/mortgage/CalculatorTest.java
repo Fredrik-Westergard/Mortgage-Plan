@@ -20,7 +20,7 @@ public class CalculatorTest extends TestCase {
     @Test
     public void testCalculateFormula(){
         Money totalLoan = list.get(0).getTotalLoan();
-        Money interest = list.get(0).getInterest();
+        double interest = list.get(0).getInterest();
         int years = list.get(0).getYears();
         Calculator calc = new Calculator(totalLoan, interest,years);
         assertEquals(calc.calculateFormula(), 41.84027777777793);
@@ -31,7 +31,7 @@ public class CalculatorTest extends TestCase {
      */
     @Test
     public void testToThePowerOf(){
-        Calculator calc = new Calculator(new Money(0),new Money(0),0);
+        Calculator calc = new Calculator(new Money(0),0,0);
         assertEquals(calc.toThePowerOf(5.5,5), 5032.84375);
     }
 

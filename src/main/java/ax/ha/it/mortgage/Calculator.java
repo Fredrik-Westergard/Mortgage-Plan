@@ -12,12 +12,12 @@ public class Calculator {
     /**
      * calculator constructor
      * @param totalLoan the total loan in Money format
-     * @param interest the interest in Money format
+     * @param interest the interest
      * @param years the number of years
      */
-    public Calculator(Money totalLoan, Money interest, int years) {
+    public Calculator(Money totalLoan, double interest, int years) {
         this.totalLoan = totalLoan.getMoney();
-        this.interest = interest.getMoney();
+        this.interest = interest;
         this.years = years;
     }
 

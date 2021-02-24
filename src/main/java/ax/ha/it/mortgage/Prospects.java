@@ -7,7 +7,7 @@ package ax.ha.it.mortgage;
 public class Prospects {
     private String customer;    //the customer name
     private Money totalLoan;   //the total loan amount
-    private Money interest;    //the interest
+    private double interest;    //the interest
     private int years;          //the number of years
 
     /**
@@ -21,7 +21,7 @@ public class Prospects {
         this.customer = customer;
         this.years = years;
         this.totalLoan = new Money(totalLoan);
-        this.interest = new Money(interest);
+        this.interest = interest;
     }
 
     /**
@@ -41,10 +41,10 @@ public class Prospects {
     }
 
     /**
-     * interest getter in Money format
+     * interest getter
      * @return the interest
      */
-    public Money getInterest() {
+    public double getInterest() {
         return interest;
     }
 
@@ -64,7 +64,7 @@ public class Prospects {
     public String toString() {
         return  "customer='" + customer + '\'' +
                 ", totalLoan=" + totalLoan.toString() +
-                ", interest=" + interest.toString() +
+                ", interest=" + interest +
                 ", years=" + years;
     }
 }
