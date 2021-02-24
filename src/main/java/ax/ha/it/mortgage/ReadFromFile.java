@@ -14,7 +14,7 @@ public class ReadFromFile {
      * @return a list of Prospects
      */
     public List<Prospects> readFile(){
-        File file = new File(getClass().getClassLoader().getResource("prospects.txt").getFile());
+        File file = new File(System.getProperty("user.home") + "/prospects.txt");
 
         List<Prospects> list = new ArrayList<>();
 
