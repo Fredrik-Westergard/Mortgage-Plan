@@ -30,7 +30,7 @@ public class Printer {
             Money interest = p.getInterest();
             int years = p.getYears();
             Calculator calc = new Calculator(totalLoan, interest,years);
-            Money monthly = calc.calculateFormula();
+            double monthly = calc.calculateFormula();
             toPrint.append("**************************************************************************************************************\n");
             toPrint.append("Prospect ");
             toPrint.append(i);
@@ -41,7 +41,7 @@ public class Printer {
             toPrint.append("€ for a period of ");
             toPrint.append(years);
             toPrint.append(" years and pay ");
-            toPrint.append(monthly.getMoney());
+            toPrint.append(monthly);
             toPrint.append(" each month.\n");
             i++;
         }

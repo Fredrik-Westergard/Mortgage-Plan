@@ -23,7 +23,7 @@ public class CalculatorTest extends TestCase {
         Money interest = list.get(0).getInterest();
         int years = list.get(0).getYears();
         Calculator calc = new Calculator(totalLoan, interest,years);
-        assertEquals(calc.calculateFormula().getMoney(), 46.64);
+        assertEquals(calc.calculateFormula(), 41.84027777777793);
     }
 
     /**

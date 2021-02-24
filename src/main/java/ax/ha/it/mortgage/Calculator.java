@@ -55,9 +55,9 @@ public class Calculator {
      * method to calculate formula
      * @return the result of the formula calculated and in Money format
      */
-    public Money calculateFormula(){
+    public double calculateFormula(){
         int p = 12*years;               //p = the number of payments
-        double b = interest/(100+12);   //b = the interest on a monthly basis
-        return new Money((totalLoan*(b*toThePowerOf((1+b),p)))/toThePowerOf((1+b),p-1));    //the formula
+        double b = ((interest/100)/12);   //b = the interest on a monthly basis
+        return ((totalLoan*b)/(1-toThePowerOf((1+b),-p)))/p;    //the formula
     }
 }
